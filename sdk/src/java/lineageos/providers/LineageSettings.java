@@ -374,7 +374,7 @@ public final class LineageSettings {
             new InclusiveIntegerRangeValidator(0, 86400);
 
     private static final Validator sHardwareKeyActionvalidator =
-            new InclusiveIntegerRangeValidator(0, 13);
+            new InclusiveIntegerRangeValidator(0, 19);
 
     private static final Validator sAlwaysTrueValidator = new Validator() {
         @Override
@@ -1089,8 +1089,14 @@ public final class LineageSettings {
          * 9 - Toggle split screen
          * 10 - Kill foreground app
          * 11 - Play/pause music
-         * 12 - Take screenshot
-         * 13 - Take partial screenshot
+         * 12 - Torch
+         * 13 - Screenshot
+         * 14 - Partial screenshot
+         * 15 - Volume Panel
+         * 16 - Clear All Notifications
+         * 17 - Notifications
+         * 18 - Toggle Qs Panel
+         * 19 - Ringer Modes
          */
         public static final String KEY_HOME_LONG_PRESS_ACTION = "key_home_long_press_action";
 
@@ -1219,6 +1225,16 @@ public final class LineageSettings {
 
         /** @hide */
         public static final Validator KEY_APP_SWITCH_ACTION_VALIDATOR =
+                sHardwareKeyActionvalidator;
+
+        /**
+         * Action to perform when the app switch key is double-tapped. (Default is 8)
+         * (See KEY_HOME_LONG_PRESS_ACTION for valid values)
+         */
+        public static final String KEY_APP_SWITCH_DOUBLE_TAP_ACTION = "key_app_switch_double_tap_action";
+
+        /** @hide */
+        public static final Validator KEY_APP_SWITCH_DOUBLE_TAP_ACTION_VALIDATOR =
                 sHardwareKeyActionvalidator;
 
         /**
@@ -2163,6 +2179,8 @@ public final class LineageSettings {
             VALIDATORS.put(KEY_APP_SWITCH_ACTION, KEY_APP_SWITCH_ACTION_VALIDATOR);
             VALIDATORS.put(KEY_APP_SWITCH_LONG_PRESS_ACTION,
                     KEY_APP_SWITCH_LONG_PRESS_ACTION_VALIDATOR);
+            VALIDATORS.put(KEY_APP_SWITCH_DOUBLE_TAP_ACTION,
+                    KEY_APP_SWITCH_DOUBLE_TAP_ACTION_VALIDATOR);
             VALIDATORS.put(KEY_EDGE_LONG_SWIPE_ACTION, KEY_EDGE_LONG_SWIPE_ACTION_VALIDATOR);
             VALIDATORS.put(HOME_WAKE_SCREEN, HOME_WAKE_SCREEN_VALIDATOR);
             VALIDATORS.put(ASSIST_WAKE_SCREEN, ASSIST_WAKE_SCREEN_VALIDATOR);
