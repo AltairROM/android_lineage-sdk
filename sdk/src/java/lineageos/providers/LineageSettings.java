@@ -2772,6 +2772,12 @@ public final class LineageSettings {
         public static final String QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
 
         /**
+         * Where to show the brightness slider in quick settings panel.
+         * 0 = Top, 1 = Bottom
+         */
+        public static final String QS_BRIGHTNESS_SLIDER_POSITION = "qs_brightness_slider_position";
+
+        /**
          * Whether to show the auto brightness icon in quick settings panel.
          * @hide
          */
