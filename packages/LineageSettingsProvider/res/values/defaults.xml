@@ -82,4 +82,11 @@
     <!-- Default value for lockscreen rotation -->
     <bool name="def_lockscreen_rotation">false</bool>
 
+    <!--  Default setting for show battery percent
+          * 0: Hidden
+          * 1: Inside the icon
+          * 2: Next to the icon
+    -->
+    <integer name="def_show_battery_percent">2</integer>
+
 </resources>
