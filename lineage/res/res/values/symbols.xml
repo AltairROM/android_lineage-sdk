@@ -89,6 +89,7 @@
     <java-symbol type="integer" name="config_doubleTapOnHomeBehavior" />
     <java-symbol type="integer" name="config_longPressOnMenuBehavior" />
     <java-symbol type="integer" name="config_longPressOnAppSwitchBehavior" />
+    <java-symbol type="integer" name="config_doubleTapOnAppSwitchBehavior" />
     <java-symbol type="integer" name="config_pressOnAssistBehavior" />
     <java-symbol type="integer" name="config_longPressOnAssistBehavior" />
 
